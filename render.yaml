@@ -1,13 +1,13 @@
 services:
   - type: web
-    name: strapi
+    name: af-wedding-strapi
     env: node
     plan: starter
     buildCommand: yarn install && yarn build
     startCommand: yarn start
     disk:
-      name: strapi-data
-      mountPath: /data
+      name: af-wedding-strapi-strapi-uploads
+      mountPath: /opt/render/project/src/public/uploads
       sizeGB: 1
     envVars:
       - key: NODE_VERSION
